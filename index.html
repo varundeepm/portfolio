@@ -10,9 +10,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=10">
 </head>
 
 <body>
@@ -39,35 +39,87 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero" id="hero">
-    <div class="hero__overlay">
-      <p class="eyebrow eyebrow--teal mono">// mern-stack developer</p>
-      <h1 class="hero__name">Varundeep <span>M</span></h1>
-      <div class="hero__word-slider" id="word-slider">
-        <span class="slider-label">&gt;</span>
-        <div class="hero__word-track" id="word-track"></div>
-        <span class="hero__word-cursor" style="background:var(--amber)"></span>
+    <div class="hero__container">
+
+      <!-- LEFT: Text Content -->
+      <div class="hero__overlay">
+        <p class="hero__greeting">// mern-stack developer</p>
+        <h1 class="hero__name">Varundeep <span>M</span></h1>
+        <div class="hero__word-slider" id="word-slider">
+          <span class="slider-label">&gt;</span>
+          <div class="hero__word-track" id="word-track"></div>
+          <span class="hero__word-cursor" style="background:var(--amber)"></span>
+        </div>
+        <p class="hero__desc">Final-year BTech IT student who builds responsive, component-based UIs and integrates them
+          with scalable Node.js backends — focused on state management, server-side pagination, and RESTful architecture.
+        </p>
+        <div class="hero__cta">
+          <a href="#contact" class="btn btn--primary">POST /contact</a>
+          <a href="#projects" class="btn btn--outline">GET /projects</a>
+        </div>
+        <div class="hero__stack">
+          <span>client: React.js</span>
+          <span>server: Node / Express</span>
+          <span>db: MongoDB</span>
+          <span>auth: JWT</span>
+          <span>realtime: Socket.io</span>
+        </div>
       </div>
-      <p class="hero__desc">Final-year BTech IT student who builds responsive, component-based UIs and integrates them
-        with scalable Node.js backends — focused on state management, server-side pagination, and RESTful architecture.
-      </p>
-      <div class="hero__cta">
-        <a href="#contact" class="btn btn--primary">POST /contact</a>
-        <a href="#projects" class="btn btn--outline">GET /projects</a>
+
+      <!-- RIGHT: Profile Photo with Hexagon Frame -->
+      <div class="hero__photo-side">
+        <div class="hero__photo-wrapper">
+          <span class="hex-corner hex-corner--tl"></span>
+          <span class="hex-corner hex-corner--tr"></span>
+          <span class="hex-corner hex-corner--bl"></span>
+          <span class="hex-corner hex-corner--br"></span>
+          <div class="hex-ring"></div>
+          <div class="hex-frame">
+            <img src="dp.jpg" alt="Varundeep M" class="hero__photo">
+          </div>
+          <div class="hex-dot"></div>
+        </div>
       </div>
-      <div class="hero__stack">
-        <span>client: React.js</span>
-        <span>server: Node / Express</span>
-        <span>db: MongoDB</span>
-        <span>auth: JWT</span>
-        <span>realtime: Socket.io</span>
-      </div>
+
     </div>
   </section>
+
+  <!-- ===== MARQUEE TECH STRIP ===== -->
+  <div class="marquee-strip">
+    <div class="marquee-track" id="marquee-track">
+      <!-- Set 1 -->
+      <span class="marquee-item"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M4 2l2.4 27L16 31l9.6-2L28 2H4z" fill="#E44D26"/></svg>HTML5</span>
+      <span class="marquee-item"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M4 2l2.4 27L16 31l9.6-2L28 2H4z" fill="#1572B6"/></svg>CSS3</span>
+      <span class="marquee-item"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="4" fill="#F7DF1E"/><path d="M20.8 22.6c.5.8 1.2 1.4 2.3 1.4 1 0 1.6-.5 1.6-1.1 0-.8-.6-1-1.7-1.5l-.6-.2c-1.7-.7-2.8-1.6-2.8-3.5 0-1.7 1.3-3 3.4-3 1.5 0 2.5.5 3.3 1.8l-1.8 1.2c-.4-.7-.8-1-1.5-1-.7 0-1.1.4-1.1 1 0 .7.4 1 1.5 1.4l.6.3c2 .8 3.1 1.7 3.1 3.6 0 2.1-1.6 3.2-3.8 3.2-2.1 0-3.5-1-4.2-2.4l1.7-1.2zM12.5 22.8c.3.6.6 1 1.3 1 .7 0 1-.3 1-1.3V16h2.2v6.6c0 2.2-1.3 3.2-3.1 3.2-1.7 0-2.6-.9-3.1-1.9l1.7-1.1z" fill="#323330"/></svg>JavaScript</span>
+      <span class="marquee-item"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="2.8" fill="#61DAFB"/><ellipse cx="16" cy="16" rx="12" ry="4.5" stroke="#61DAFB" stroke-width="1.5" fill="none"/><ellipse cx="16" cy="16" rx="12" ry="4.5" stroke="#61DAFB" stroke-width="1.5" fill="none" transform="rotate(60 16 16)"/><ellipse cx="16" cy="16" rx="12" ry="4.5" stroke="#61DAFB" stroke-width="1.5" fill="none" transform="rotate(120 16 16)"/></svg>React.js</span>
+      <span class="marquee-item"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 2.3L3.5 9.5v14.4L16 31.1l12.5-7.2V9.5L16 2.3z" fill="#339933"/></svg>Node.js</span>
+      <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:#fff"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>Express.js</span>
+      <span class="marquee-item"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3c-4.5 6.5-6 10-6 13a6 6 0 0012 0c0-3-1.5-6.5-6-13z" fill="#4DB33D"/></svg>MongoDB</span>
+      <span class="marquee-item"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M29.5 14.5l-12-12a2 2 0 00-2.8 0l-2.5 2.5 3.2 3.2a2.4 2.4 0 013 3l3 3a2.4 2.4 0 012.8 3.8 2.4 2.4 0 11-3.8-2.8l-2.8-2.8v7.3a2.4 2.4 0 11-2-.1V12.5a2.4 2.4 0 01-1.3-3.1L10 6.1l-7.5 7.5a2 2 0 000 2.8l12 12a2 2 0 002.8 0l12-12a2 2 0 000-2.9z" fill="#F05032"/></svg>Git</span>
+      <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="#8B8FFD" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M9 13h6l-3 4"/></svg>Socket.io</span>
+      <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="#FBBF24" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 7l5 5-5 5M13 17h4"/></svg>JWT Auth</span>
+      <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="1.5"><rect x="2" y="7" width="20" height="5" rx="2"/><rect x="2" y="14" width="20" height="5" rx="2"/><circle cx="7" cy="9.5" r="1.2" fill="#2DD4BF"/></svg>REST APIs</span>
+      <span class="marquee-item"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M12.5 19.5s-1 .6.7.8c2 .2 3 .2 5.2-.3 0 0 .6.4 1.4.7-4.9 2.1-11-.1-7.3-1.2z" fill="#F89820"/><path d="M18 3s2.5 2.5-2.3 6.3c-3.8 3-1 4.8 0 6.7-2.2-2-3.8-3.7-2.7-5.4C14.6 8.3 19.2 7 18 3z" fill="#F89820"/></svg>Java</span>
+      <!-- Set 2 — duplicate for seamless loop -->
+      <span class="marquee-item"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M4 2l2.4 27L16 31l9.6-2L28 2H4z" fill="#E44D26"/></svg>HTML5</span>
+      <span class="marquee-item"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M4 2l2.4 27L16 31l9.6-2L28 2H4z" fill="#1572B6"/></svg>CSS3</span>
+      <span class="marquee-item"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="4" fill="#F7DF1E"/><path d="M20.8 22.6c.5.8 1.2 1.4 2.3 1.4 1 0 1.6-.5 1.6-1.1 0-.8-.6-1-1.7-1.5l-.6-.2c-1.7-.7-2.8-1.6-2.8-3.5 0-1.7 1.3-3 3.4-3 1.5 0 2.5.5 3.3 1.8l-1.8 1.2c-.4-.7-.8-1-1.5-1-.7 0-1.1.4-1.1 1 0 .7.4 1 1.5 1.4l.6.3c2 .8 3.1 1.7 3.1 3.6 0 2.1-1.6 3.2-3.8 3.2-2.1 0-3.5-1-4.2-2.4l1.7-1.2zM12.5 22.8c.3.6.6 1 1.3 1 .7 0 1-.3 1-1.3V16h2.2v6.6c0 2.2-1.3 3.2-3.1 3.2-1.7 0-2.6-.9-3.1-1.9l1.7-1.1z" fill="#323330"/></svg>JavaScript</span>
+      <span class="marquee-item"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="2.8" fill="#61DAFB"/><ellipse cx="16" cy="16" rx="12" ry="4.5" stroke="#61DAFB" stroke-width="1.5" fill="none"/><ellipse cx="16" cy="16" rx="12" ry="4.5" stroke="#61DAFB" stroke-width="1.5" fill="none" transform="rotate(60 16 16)"/><ellipse cx="16" cy="16" rx="12" ry="4.5" stroke="#61DAFB" stroke-width="1.5" fill="none" transform="rotate(120 16 16)"/></svg>React.js</span>
+      <span class="marquee-item"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 2.3L3.5 9.5v14.4L16 31.1l12.5-7.2V9.5L16 2.3z" fill="#339933"/></svg>Node.js</span>
+      <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:#fff"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>Express.js</span>
+      <span class="marquee-item"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3c-4.5 6.5-6 10-6 13a6 6 0 0012 0c0-3-1.5-6.5-6-13z" fill="#4DB33D"/></svg>MongoDB</span>
+      <span class="marquee-item"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M29.5 14.5l-12-12a2 2 0 00-2.8 0l-2.5 2.5 3.2 3.2a2.4 2.4 0 013 3l3 3a2.4 2.4 0 012.8 3.8 2.4 2.4 0 11-3.8-2.8l-2.8-2.8v7.3a2.4 2.4 0 11-2-.1V12.5a2.4 2.4 0 01-1.3-3.1L10 6.1l-7.5 7.5a2 2 0 000 2.8l12 12a2 2 0 002.8 0l12-12a2 2 0 000-2.9z" fill="#F05032"/></svg>Git</span>
+      <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="#8B8FFD" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M9 13h6l-3 4"/></svg>Socket.io</span>
+      <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="#FBBF24" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 7l5 5-5 5M13 17h4"/></svg>JWT Auth</span>
+      <span class="marquee-item"><svg viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="1.5"><rect x="2" y="7" width="20" height="5" rx="2"/><rect x="2" y="14" width="20" height="5" rx="2"/><circle cx="7" cy="9.5" r="1.2" fill="#2DD4BF"/></svg>REST APIs</span>
+      <span class="marquee-item"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M12.5 19.5s-1 .6.7.8c2 .2 3 .2 5.2-.3 0 0 .6.4 1.4.7-4.9 2.1-11-.1-7.3-1.2z" fill="#F89820"/><path d="M18 3s2.5 2.5-2.3 6.3c-3.8 3-1 4.8 0 6.7-2.2-2-3.8-3.7-2.7-5.4C14.6 8.3 19.2 7 18 3z" fill="#F89820"/></svg>Java</span>
+    </div>
+  </div>
 
   <!-- ===== ABOUT — ROADMAP TIMELINE ===== -->
   <section class="section" id="about">
     <div class="section__header reveal">
-      <p class="eyebrow eyebrow--teal mono">GET /about</p>
+      <p class="eyebrow eyebrow--teal">GET /about</p>
       <h2 class="section__title">About Me — My Journey</h2>
     </div>
     <p class="about-intro reveal">I'm a final-year Information Technology student at SREC, Coimbatore. Here's the
@@ -174,7 +226,7 @@
   <!-- ===== EXPERIENCE ===== -->
   <section class="section" id="experience">
     <div class="section__header reveal">
-      <p class="eyebrow eyebrow--amber mono">GET /experience</p>
+      <p class="eyebrow eyebrow--amber">GET /experience</p>
       <h2 class="section__title">Experience</h2>
     </div>
 
@@ -220,41 +272,51 @@
   <!-- ===== PROJECTS ===== -->
   <section class="section" id="projects">
     <div class="section__header reveal">
-      <p class="eyebrow eyebrow--violet mono">GET /projects</p>
+      <p class="eyebrow eyebrow--violet">GET /projects</p>
       <h2 class="section__title">Projects</h2>
     </div>
 
     <div class="projects-grid">
       <div class="proj-card reveal">
-        <div class="proj-card__name">Care Passport</div>
-        <div class="proj-card__sub">web: Healthcare Platform</div>
-        <div class="proj-card__desc">A web-based healthcare platform with JWT-based dynamic authentication, REST API
-          endpoints, and role-based access for doctors and patients. Replaced hardcoded user data with API-driven
-          authentication integrating Auth Context and JWT token flow for real-time backend validation.</div>
-        <div class="proj-card__tags">
-          <span class="tag tag--teal">React</span>
-          <span class="tag tag--teal">TypeScript</span>
-          <span class="tag tag--amber">Express.js</span>
-          <span class="tag tag--violet">MongoDB</span>
-          <span class="tag">JWT</span>
-          <span class="tag">REST API</span>
+        <div class="proj-card__img-wrap">
+          <img src="carepassport.jpeg" alt="Care Passport Screenshot" class="proj-card__img">
+        </div>
+        <div class="proj-card__content">
+          <div class="proj-card__name">Care Passport</div>
+          <div class="proj-card__sub">web: Healthcare Platform</div>
+          <div class="proj-card__desc">A web-based healthcare platform with JWT-based dynamic authentication, REST API
+            endpoints, and role-based access for doctors and patients. Replaced hardcoded user data with API-driven
+            authentication integrating Auth Context and JWT token flow for real-time backend validation.</div>
+          <div class="proj-card__tags">
+            <span class="tag tag--teal">React</span>
+            <span class="tag tag--teal">TypeScript</span>
+            <span class="tag tag--amber">Express.js</span>
+            <span class="tag tag--violet">MongoDB</span>
+            <span class="tag">JWT</span>
+            <span class="tag">REST API</span>
+          </div>
         </div>
       </div>
 
       <div class="proj-card reveal reveal-delay-1">
-        <div class="proj-card__name">AI-Powered Parental Control</div>
-        <div class="proj-card__sub">backend_db: Real-Time Monitoring System</div>
-        <div class="proj-card__desc">A real-time monitoring system with a Node.js agent, Chrome Extension (Manifest V3),
-          Socket.io, MongoDB Atlas, and Twilio SDK — tracking OS-level processes, web activity, and network connections.
-          Resolved real-time alert latency by integrating Socket.io full-duplex events alongside Twilio for simultaneous
-          guardian notification.</div>
-        <div class="proj-card__tags">
-          <span class="tag tag--amber">Node.js</span>
-          <span class="tag tag--violet">MongoDB Atlas</span>
-          <span class="tag tag--teal">Socket.io</span>
-          <span class="tag">Chrome Extension</span>
-          <span class="tag">Twilio SDK</span>
-          <span class="tag">Manifest V3</span>
+        <div class="proj-card__img-wrap">
+          <img src="childexplore.jpeg" alt="AI Parental Control Screenshot" class="proj-card__img">
+        </div>
+        <div class="proj-card__content">
+          <div class="proj-card__name">AI-Powered Parental Control</div>
+          <div class="proj-card__sub">backend_db: Real-Time Monitoring System</div>
+          <div class="proj-card__desc">A real-time monitoring system with a Node.js agent, Chrome Extension (Manifest V3),
+            Socket.io, MongoDB Atlas, and Twilio SDK — tracking OS-level processes, web activity, and network connections.
+            Resolved real-time alert latency by integrating Socket.io full-duplex events alongside Twilio for simultaneous
+            guardian notification.</div>
+          <div class="proj-card__tags">
+            <span class="tag tag--amber">Node.js</span>
+            <span class="tag tag--violet">MongoDB Atlas</span>
+            <span class="tag tag--teal">Socket.io</span>
+            <span class="tag">Chrome Extension</span>
+            <span class="tag">Twilio SDK</span>
+            <span class="tag">Manifest V3</span>
+          </div>
         </div>
       </div>
     </div>
@@ -263,51 +325,114 @@
   <!-- ===== SKILLS ===== -->
   <section class="section" id="skills">
     <div class="section__header reveal">
-      <p class="eyebrow eyebrow--teal mono">GET /skills</p>
+      <p class="eyebrow eyebrow--teal">GET /skills</p>
       <h2 class="section__title">Technical Skills</h2>
     </div>
 
-    <div class="skills-grid reveal">
-      <div class="skill-group">
-        <div class="skill-group__key">"languages":</div>
-        <div class="skill-group__chips">
-          <span class="chip">Java</span>
-          <span class="chip">JavaScript</span>
+    <div class="skills-icon-grid reveal">
+      <!-- HTML -->
+      <div class="skill-icon-card">
+        <div class="skill-icon-wrap" style="background:rgba(228,77,38,.15);border-color:rgba(228,77,38,.35)">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 2l2.4 27L16 31l9.6-2L28 2H4z" fill="#E44D26"/><path d="M16 28.8l7.8-2.2 2.1-23.4H16v25.6z" fill="#F16529"/><path d="M16 13.4h-4.1l-.3-3.4H16V6.8H8.3l.8 9.1H16v-2.5zm0 9.5l-.1.1-3.3-.9-.2-2.4H10l.4 4.4 5.6 1.6v-2.8z" fill="#fff"/><path d="M16 13.4v2.5h3.8l-.4 4.3-3.4.9v2.8l5.7-1.6.8-9.9H16zm0-6.6v3.2h7.3l.2-3.2H16z" fill="#EBEBEB"/></svg>
         </div>
+        <div class="skill-icon-name">HTML</div>
+        <div class="skill-icon-sub">Structure</div>
       </div>
-      <div class="skill-group">
-        <div class="skill-group__key">"web":</div>
-        <div class="skill-group__chips">
-          <span class="chip">HTML</span>
-          <span class="chip">CSS</span>
-          <span class="chip">React.js</span>
-          <span class="chip">Express.js</span>
+      <!-- CSS -->
+      <div class="skill-icon-card">
+        <div class="skill-icon-wrap" style="background:rgba(38,77,228,.15);border-color:rgba(38,77,228,.35)">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 2l2.4 27L16 31l9.6-2L28 2H4z" fill="#1572B6"/><path d="M16 28.8l7.8-2.2 2.1-23.4H16v25.6z" fill="#33A9DC"/><path d="M16 13.6h4.3l-.3 3.7-4 1.1v3l7.4-2 1-11.5H16v2.5zm0-5.5v2.5h8.4l.2-2.5H16z" fill="#fff"/><path d="M16 18.4v-3l-3.5-1-.2-2.8H10l.4 5.1 5.6 1.7zm0-10.3H7.6l.2 2.5H16V8.1z" fill="#EBEBEB"/></svg>
         </div>
+        <div class="skill-icon-name">CSS</div>
+        <div class="skill-icon-sub">Styling</div>
       </div>
-      <div class="skill-group">
-        <div class="skill-group__key">"backend_db":</div>
-        <div class="skill-group__chips">
-          <span class="chip">Node.js</span>
-          <span class="chip">MongoDB</span>
+      <!-- JavaScript -->
+      <div class="skill-icon-card">
+        <div class="skill-icon-wrap" style="background:rgba(247,223,30,.15);border-color:rgba(247,223,30,.35)">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="4" fill="#F7DF1E"/><path d="M20.8 22.6c.5.8 1.2 1.4 2.3 1.4 1 0 1.6-.5 1.6-1.1 0-.8-.6-1-1.7-1.5l-.6-.2c-1.7-.7-2.8-1.6-2.8-3.5 0-1.7 1.3-3 3.4-3 1.5 0 2.5.5 3.3 1.8l-1.8 1.2c-.4-.7-.8-1-1.5-1-.7 0-1.1.4-1.1 1 0 .7.4 1 1.5 1.4l.6.3c2 .8 3.1 1.7 3.1 3.6 0 2.1-1.6 3.2-3.8 3.2-2.1 0-3.5-1-4.2-2.4l1.7-1.2zM12.5 22.8c.3.6.6 1 1.3 1 .7 0 1-.3 1-1.3V16h2.2v6.6c0 2.2-1.3 3.2-3.1 3.2-1.7 0-2.6-.9-3.1-1.9l1.7-1.1z" fill="#323330"/></svg>
         </div>
+        <div class="skill-icon-name">JavaScript</div>
+        <div class="skill-icon-sub">Interactivity</div>
       </div>
-      <div class="skill-group">
-        <div class="skill-group__key">"tools":</div>
-        <div class="skill-group__chips">
-          <span class="chip">Git</span>
-          <span class="chip">GitHub</span>
-          <span class="chip">VS Code</span>
+      <!-- React -->
+      <div class="skill-icon-card">
+        <div class="skill-icon-wrap" style="background:rgba(97,218,251,.15);border-color:rgba(97,218,251,.35)">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="2.8" fill="#61DAFB"/><ellipse cx="16" cy="16" rx="12" ry="4.5" stroke="#61DAFB" stroke-width="1.5" fill="none"/><ellipse cx="16" cy="16" rx="12" ry="4.5" stroke="#61DAFB" stroke-width="1.5" fill="none" transform="rotate(60 16 16)"/><ellipse cx="16" cy="16" rx="12" ry="4.5" stroke="#61DAFB" stroke-width="1.5" fill="none" transform="rotate(120 16 16)"/></svg>
         </div>
+        <div class="skill-icon-name">React.js</div>
+        <div class="skill-icon-sub">UI Library</div>
       </div>
-      <div class="skill-group">
-        <div class="skill-group__key">"concepts":</div>
-        <div class="skill-group__chips">
-          <span class="chip">REST APIs</span>
-          <span class="chip">State Management</span>
-          <span class="chip">Server-Side Pagination</span>
-          <span class="chip">JWT Auth</span>
-          <span class="chip">Socket.io</span>
+      <!-- Node.js -->
+      <div class="skill-icon-card">
+        <div class="skill-icon-wrap" style="background:rgba(104,160,99,.15);border-color:rgba(104,160,99,.35)">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 2.3L3.5 9.5v14.4L16 31.1l12.5-7.2V9.5L16 2.3z" fill="#339933"/><path d="M21.7 21.7c0 1.8-1.1 2.6-2.6 2.6-1.4 0-2.3-.8-2.7-1.8l1.6-.9c.3.5.6.9 1.1.9.5 0 .8-.2.8-.9v-5.5h1.8v5.6zm3.9.2c0 2-1.2 2.8-2.9 2.8-1.5 0-2.4-.7-2.8-1.6l1.6-.9c.3.5.7 1 1.4 1 .7 0 1-.3 1-1V16h1.7v5.9z" fill="#fff"/></svg>
         </div>
+        <div class="skill-icon-name">Node.js</div>
+        <div class="skill-icon-sub">Runtime</div>
+      </div>
+      <!-- Express -->
+      <div class="skill-icon-card">
+        <div class="skill-icon-wrap" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2)">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><text x="2" y="22" font-family="JetBrains Mono,monospace" font-size="13" font-weight="700" fill="#fff">Ex</text></svg>
+        </div>
+        <div class="skill-icon-name">Express.js</div>
+        <div class="skill-icon-sub">Framework</div>
+      </div>
+      <!-- MongoDB -->
+      <div class="skill-icon-card">
+        <div class="skill-icon-wrap" style="background:rgba(77,179,61,.15);border-color:rgba(77,179,61,.35)">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3c-4.5 6.5-6 10-6 13a6 6 0 0012 0c0-3-1.5-6.5-6-13z" fill="#4DB33D"/><path d="M16 26v3" stroke="#4DB33D" stroke-width="1.5"/><circle cx="16" cy="16" r="1.5" fill="#fff"/></svg>
+        </div>
+        <div class="skill-icon-name">MongoDB</div>
+        <div class="skill-icon-sub">Database</div>
+      </div>
+      <!-- Git -->
+      <div class="skill-icon-card">
+        <div class="skill-icon-wrap" style="background:rgba(240,80,50,.15);border-color:rgba(240,80,50,.35)">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M29.5 14.5l-12-12a2 2 0 00-2.8 0l-2.5 2.5 3.2 3.2a2.4 2.4 0 013 3l3 3a2.4 2.4 0 012.8 3.8 2.4 2.4 0 11-3.8-2.8l-2.8-2.8v7.3a2.4 2.4 0 11-2-.1V12.5a2.4 2.4 0 01-1.3-3.1L10 6.1l-7.5 7.5a2 2 0 000 2.8l12 12a2 2 0 002.8 0l12-12a2 2 0 000-2.9z" fill="#F05032"/></svg>
+        </div>
+        <div class="skill-icon-name">Git</div>
+        <div class="skill-icon-sub">Version Control</div>
+      </div>
+      <!-- GitHub -->
+      <div class="skill-icon-card">
+        <div class="skill-icon-wrap" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2)">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 3C9 3 3 9 3 16.2c0 5.8 3.8 10.8 9 12.5.7.1.9-.3.9-.6v-2.3c-3.7.8-4.5-1.6-4.5-1.6-.6-1.6-1.5-2-1.5-2-1.2-.8.1-.8.1-.8 1.4.1 2.1 1.4 2.1 1.4 1.2 2 3.2 1.4 4 1.1.1-.9.5-1.4.9-1.7-3-.3-6.1-1.5-6.1-6.6 0-1.5.5-2.7 1.4-3.6-.1-.3-.6-1.7.1-3.6 0 0 1.1-.4 3.7 1.4a13 13 0 016.8 0C22.9 8 24 8.4 24 8.4c.7 1.9.2 3.3.1 3.6.9.9 1.4 2.1 1.4 3.6 0 5.1-3.1 6.3-6.1 6.6.5.4.9 1.2.9 2.4v3.6c0 .3.2.7.9.6C25.2 27 29 22 29 16.2 29 9 23 3 16 3z" fill="#fff"/></svg>
+        </div>
+        <div class="skill-icon-name">GitHub</div>
+        <div class="skill-icon-sub">Collaboration</div>
+      </div>
+      <!-- Java -->
+      <div class="skill-icon-card">
+        <div class="skill-icon-wrap" style="background:rgba(248,152,32,.15);border-color:rgba(248,152,32,.35)">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M12.5 19.5s-1 .6.7.8c2 .2 3 .2 5.2-.3 0 0 .6.4 1.4.7-4.9 2.1-11-.1-7.3-1.2zm-.6-2.8s-1.1.8.6 1c2.3.2 4.1.2 5.7-.3 0 0 .4.4 1 .6-5 1.5-10.7.2-7.3-1.3z" fill="#F89820"/><path d="M17 11.2c1 1.2-.3 2.2-.3 2.2s2.5-1.3 1.4-2.9c-1-1.5-1.8-2.3 2.5-4.9 0 0-6.9 1.7-3.6 5.6z" fill="#F89820"/><path d="M21.5 21.2s.7.6-.8.9c-3 .9-12.4.7-15 0-.9-.4.8-1 1.3-1.1.6-.1.9-.1.9-.1-.9-.7-6.2 1.3-2.6 1.9 9.6 1.6 17.5-.7 16.2-1.6zm-8.8-6.4s-4.3 1-1.5 1.4c1.2.2 3.5.1 5.7-.1 1.8-.2 3.5-.5 3.5-.5s-.6.3-1 .5c-4.1 1.1-12 .6-9.7-.5 1.9-.9 3-.8 3-.8zm7.6 4.2c4.2-2.2 2.2-4.3.9-4 -.3.1-.5.2-.5.2s.1-.2.4-.3c3.1-1.1 5.5 3.2-.9 4.9 0 0 .1-.1.1-.8z" fill="#F89820"/><path d="M18 3s2.5 2.5-2.3 6.3c-3.8 3-1 4.8 0 6.7-2.2-2-3.8-3.7-2.7-5.4C14.6 8.3 19.2 7 18 3z" fill="#F89820"/><path d="M13.3 27c4 .3 10.2-.1 10.3-1.9 0 0-.3.8-3.3 1.4-3.4.7-7.6.6-10.1.2 0 0 .5.5 3.1.3z" fill="#F89820"/></svg>
+        </div>
+        <div class="skill-icon-name">Java</div>
+        <div class="skill-icon-sub">Language</div>
+      </div>
+      <!-- JWT -->
+      <div class="skill-icon-card">
+        <div class="skill-icon-wrap" style="background:rgba(251,191,36,.15);border-color:rgba(251,191,36,.35)">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="26" height="26" rx="5" fill="#000"/><path d="M10 10l6 6-6 6M16 22h6" stroke="#FBBF24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="skill-icon-name">JWT Auth</div>
+        <div class="skill-icon-sub">Security</div>
+      </div>
+      <!-- Socket.io -->
+      <div class="skill-icon-card">
+        <div class="skill-icon-wrap" style="background:rgba(139,143,253,.15);border-color:rgba(139,143,253,.35)">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="12" fill="#8B8FFD" fill-opacity=".2" stroke="#8B8FFD" stroke-width="1.5"/><path d="M9 13h8l-5 6h8" stroke="#8B8FFD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="skill-icon-name">Socket.io</div>
+        <div class="skill-icon-sub">Real-Time</div>
+      </div>
+      <!-- REST API -->
+      <div class="skill-icon-card">
+        <div class="skill-icon-wrap" style="background:rgba(45,212,191,.15);border-color:rgba(45,212,191,.35)">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="9" width="26" height="6" rx="3" fill="none" stroke="#2DD4BF" stroke-width="1.5"/><rect x="3" y="17" width="26" height="6" rx="3" fill="none" stroke="#2DD4BF" stroke-width="1.5"/><circle cx="9" cy="12" r="1.5" fill="#2DD4BF"/><circle cx="9" cy="20" r="1.5" fill="#2DD4BF"/></svg>
+        </div>
+        <div class="skill-icon-name">REST APIs</div>
+        <div class="skill-icon-sub">Architecture</div>
       </div>
     </div>
   </section>
@@ -315,39 +440,47 @@
   <!-- ===== EDUCATION & HONORS ===== -->
   <section class="section" id="education">
     <div class="section__header reveal">
-      <p class="eyebrow eyebrow--amber mono">GET /education</p>
+      <p class="eyebrow eyebrow--amber">GET /education</p>
       <h2 class="section__title">Education &amp; Honors</h2>
     </div>
 
     <div class="edu-honors-grid reveal">
       <div>
-        <h3
-          style="font-size:1rem;color:var(--text-mute);margin-bottom:1rem;font-family:'JetBrains Mono',monospace;font-weight:500;font-size:.8rem">
-          // education</h3>
-        <div class="edu-card">
-          <div class="edu-card__degree">BTech — Information Technology</div>
-          <div class="edu-card__school">Sri Ramakrishna Engineering College, Coimbatore</div>
-          <div class="edu-card__meta">2023 – 2027 &nbsp;|&nbsp; CGPA: 7.95</div>
+        <h3 style="font-family:'JetBrains Mono',monospace;font-weight:500;font-size:.8rem;color:var(--text-mute);margin-bottom:1rem">// education</h3>
+        <div class="edu-card edu-card--logo">
+          <img src="college.jpg" alt="SREC Logo" class="edu-card__logo">
+          <div class="edu-card__body">
+            <div class="edu-card__degree">BTech — Information Technology</div>
+            <div class="edu-card__school">Sri Ramakrishna Engineering College, Coimbatore</div>
+            <div class="edu-card__meta">2023 – 2027 &nbsp;|&nbsp; CGPA: 7.95</div>
+          </div>
         </div>
-        <div class="edu-card">
-          <div class="edu-card__degree">Higher Secondary Certificate (HSC)</div>
-          <div class="edu-card__school">Virutkam Matric Higher Secondary School, Coimbatore</div>
-          <div class="edu-card__meta">2022 – 2023 &nbsp;|&nbsp; 88.3%</div>
+        <div class="edu-card edu-card--logo">
+          <img src="school.png" alt="School Logo" class="edu-card__logo">
+          <div class="edu-card__body">
+            <div class="edu-card__degree">Higher Secondary Certificate (HSC)</div>
+            <div class="edu-card__school">Virutkam Matric Higher Secondary School, Coimbatore</div>
+            <div class="edu-card__meta">2022 – 2023 &nbsp;|&nbsp; 88.3%</div>
+          </div>
         </div>
       </div>
       <div>
-        <h3
-          style="font-size:1rem;color:var(--text-mute);margin-bottom:1rem;font-family:'JetBrains Mono',monospace;font-weight:500;font-size:.8rem">
-          // honors &amp; awards</h3>
-        <div class="honor-item">
-          <div class="honor-item__rank">1</div>
-          <div class="honor-item__text"><strong>Best Paper Award</strong> — ICMRSH 2024 International Conference, SNS
-            College of Technology</div>
+        <h3 style="font-family:'JetBrains Mono',monospace;font-weight:500;font-size:.8rem;color:var(--text-mute);margin-bottom:1rem">// honors &amp; awards</h3>
+        <div class="honor-card">
+          <img src="icmrsh 2024 best paper award.jpeg" alt="ICMRSH Best Paper Award" class="honor-card__img">
+          <div class="honor-card__body">
+            <div class="honor-card__badge">🏆 Best Paper Award</div>
+            <div class="honor-card__title">ICMRSH 2024 International Conference</div>
+            <div class="honor-card__sub">SNS College of Technology</div>
+          </div>
         </div>
-        <div class="honor-item">
-          <div class="honor-item__rank">1</div>
-          <div class="honor-item__text"><strong>1st Place — Hack Apprise'25</strong> (24-Hour Hackathon), Sri
-            Ramakrishna College of Arts and Science</div>
+        <div class="honor-card">
+          <img src="srcas hackathon  2025 winner.jpeg" alt="Hackathon Winner" class="honor-card__img">
+          <div class="honor-card__body">
+            <div class="honor-card__badge">🥇 1st Place</div>
+            <div class="honor-card__title">Hack Apprise'25 — 24-Hour Hackathon</div>
+            <div class="honor-card__sub">Sri Ramakrishna College of Arts and Science</div>
+          </div>
         </div>
       </div>
     </div>
@@ -356,7 +489,7 @@
   <!-- ===== CERTIFICATIONS ===== -->
   <section class="section" id="certifications">
     <div class="section__header reveal">
-      <p class="eyebrow eyebrow--violet mono">GET /certifications</p>
+      <p class="eyebrow eyebrow--violet">GET /certifications</p>
       <h2 class="section__title">Certifications</h2>
     </div>
 
@@ -446,7 +579,7 @@
     <div class="contact">
       <div class="contact__box reveal">
         <div class="contact__inner">
-          <p class="eyebrow eyebrow--teal mono">POST /contact</p>
+          <p class="eyebrow eyebrow--teal">POST /contact</p>
           <h2 class="contact__heading">Let's Build Something</h2>
           <p class="contact__sub">Available for internships, freelance, and full-time opportunities. Send me a message —
             I'll receive it via email instantly.</p>
